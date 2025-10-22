@@ -23,5 +23,11 @@ USER jovyan
 
 RUN pip install --no-cache-dir networkx scipy
 
+
+### Install ilastik
+RUN pwd && curl -O https://files.ilastik.org/ilastik-1.4.1.post1-Linux.tar.bz2 && tar xvjf https://files.ilastik.org/ilastik-1.4.1.post1-Linux.tar.bz2 && cd 
+    
+
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
+CMD ["/bin/bash"]
