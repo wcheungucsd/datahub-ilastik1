@@ -17,15 +17,14 @@ USER root
 RUN apt-get -y install htop
 
 # 3) install packages using notebook user
-USER jovyan
+# USER jovyan
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy
+# RUN pip install --no-cache-dir networkx scipy
 
 
 ### Install ilastik
-RUN df -h
 RUN pwd && cd && pwd && curl -JRLO https://files.ilastik.org/ilastik-1.4.1.post1-Linux.tar.bz2 && tar xvjf https://files.ilastik.org/ilastik-1.4.1.post1-Linux.tar.bz2 && cd 
     
 
